@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_gradient_background"
+    tools:context=".view.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Heading Quotes-->
+        <TextView
+            android:id="@+id/tv_quotes_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="@string/quotify"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Card View-->
+        <ImageView
+            android:id="@+id/mcv_card"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="150dp"
+            android:contentDescription="@string/background_white_card"
+            android:src="@drawable/custom_white_card_bg"
+            app:layout_constraintEnd_toEndOf="@id/tv_quotes_heading"
+            app:layout_constraintStart_toStartOf="@id/tv_quotes_heading"
+            app:layout_constraintTop_toBottomOf="@id/tv_quotes_heading" />
+
+        <!--Quotes Icon-->
+        <ImageView
+            android:id="@+id/iv_quote_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/quote_s_icon"
+            android:scaleX="-1"
+            android:scaleY="-1"
+            android:src="@drawable/baseline_format_quote_24"
+            app:layout_constraintStart_toStartOf="@+id/mcv_card"
+            app:layout_constraintTop_toTopOf="@+id/mcv_card" />
+
+        <!--QuoteIndex/totalSize-->
+        <TextView
+            android:id="@+id/tv_quote_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="37dp"
+            android:text="@string/_2_5"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_quote_icon"
+            app:layout_constraintEnd_toEndOf="@+id/mcv_card"
+            app:layout_constraintTop_toTopOf="@+id/iv_quote_icon" />
+
+        <!--Main Quote-->
+        <TextView
+            android:id="@+id/tv_quote_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="start"
+            android:text="@string/example_quote"
+            android:textColor="@color/dark_gray"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/mcv_card"
+            app:layout_constraintStart_toStartOf="@id/mcv_card"
+            app:layout_constraintTop_toBottomOf="@id/iv_quote_icon" />
+
+        <!-- Author Name -->
+        <TextView
+            android:id="@+id/tv_quote_author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/example_author_name"
+            android:textColor="@color/dark_gray"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_quote_text"
+            app:layout_constraintStart_toStartOf="@id/tv_quote_text"
+            app:layout_constraintTop_toBottomOf="@id/tv_quote_text" />
+
+        <!--Share Fab Button-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_fab_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/dark_gray"
+            android:clickable="true"
+            android:contentDescription="@string/share_button_icon"
+            android:focusable="true"
+            android:src="@drawable/baseline_share_24"
+            app:layout_constraintBottom_toBottomOf="@id/mcv_card"
+            app:layout_constraintEnd_toEndOf="@id/mcv_card"
+            app:layout_constraintTop_toBottomOf="@id/mcv_card" />
+
+        <!--Previous Button-->
+        <TextView
+            android:id="@+id/tv_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="@string/previous"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_next"
+            app:layout_constraintStart_toStartOf="@id/tv_quotes_heading"
+            app:layout_constraintTop_toTopOf="@+id/tv_next"
+            app:drawableStartCompat="@drawable/baseline_chevron_left_24" />
+
+        <!--Next Button-->
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_quotes_heading"
+            app:layout_constraintTop_toBottomOf="@id/mcv_card"
+            app:layout_constraintVertical_bias="1.0"
+            app:drawableEndCompat="@drawable/baseline_chevron_right_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

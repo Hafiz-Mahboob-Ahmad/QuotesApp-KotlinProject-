@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">QuoteApp</string>
+    <string name="quotify">QUOTIFY</string>
+    <string name="quote_s_icon">Quote Icon</string>
+    <string name="example_quote">We can only learn to love by loving.</string>
+    <string name="example_author_name">Iris Murdoch</string>
+    <string name="background_white_card">background white card</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="next">NEXT</string>
+    <string name="share_button_icon">Share Button Icon</string>
+    <string name="_2_5">2/5</string>
+</resources>
